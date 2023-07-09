@@ -42,7 +42,11 @@ const About = () => {
     variants={fadeIn("", "", 0.1, 1)}
     className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
     >
-      I'm a highly skilled Full Stack Developer with a Master of Science in Computer Science from the University of Illinois at Chicago and over 4 years of experience in software development. I'm proficient in Python, Java, Ruby, C++, and R with a strong understanding of front-end technologies such as React JS, JavaScript, HTML5, and CSS. I'm experienced in using TensorFlow, PyTorch, Django, React Native, and Android app development. I have demonstrated ability to work in a fast-paced Agile SCRUM environment and deliver high-quality software solutions.
+       I'm Nikita, a passionate and creative Full Stack Developer with a knack for building innovative digital solutions. With a deep understanding of both front-end and back-end development, I bring a holistic approach to my work, aiming to create seamless user experiences that captivate and engage.
+ 
+ <br/>
+ <br/>
+ Beyond the lines of code, I consider myself a problem solver, always seeking out new challenges that push me to think outside the box. I believe in the power of technology to transform businesses and positively impact people's lives, and I'm driven by the opportunity to be a part of that transformation. Outside of coding, you'll often find me exploring the great outdoors, capturing moments through my camera lens, or sketching artworks. These passions keep me inspired and provide a fresh perspective that I bring back to my work, infusing it with creativity and innovation.
     </motion.p>
 
     <div className='mt-20 flex flex-wrap gap-10'>

@@ -161,7 +161,7 @@ import {
   const testimonials = [
     {
       testimonial:
-        "Nikita has ramped up to the demands of B2B monitoring team at a speed that is incomparable at her level of experience. She has stared making in-roads into other challenging areas of application support like L3 changes. She is very clear in her communications.",
+        "Nikita has ramped up to the demands of B2B monitoring team at a speed that is incomparable at her level of experience. She has started making in-roads into other challenging areas of application support like L3 changes. She is very clear in her communications.",
       name: "Pradeep Mudaliar",
       designation: "Senior Manager",
       company: "Accenture",

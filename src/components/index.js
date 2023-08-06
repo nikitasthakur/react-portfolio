@@ -8,6 +8,7 @@ import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import DownloadButton from './DownloadButton';
+import HeaderSocials from "./HeaderSocials";
 
 export {
   Hero,
@@ -22,5 +23,6 @@ export {
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas,
-  DownloadButton
+  DownloadButton,
+  HeaderSocials,
 }

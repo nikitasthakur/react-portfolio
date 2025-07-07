@@ -1,6 +1,6 @@
-import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
@@ -14,11 +14,6 @@ const ServiceCard = ({index, title, icon}) => {
       className='w-full green-pink-gradient p-[1px] rounded-[20] shadow-card'
       >
         <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450
-          }}
           className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] 
           flex justify-evenly items-center flex-col'
         >
@@ -31,6 +26,12 @@ const ServiceCard = ({index, title, icon}) => {
     </Tilt>
   )
 }
+
+ServiceCard.propTypes = {
+  index: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+};
 const About = () => {
   return (
     <>
@@ -42,11 +43,15 @@ const About = () => {
     variants={fadeIn("", "", 0.1, 1)}
     className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
     >
-       I'm Nikita, a passionate and creative Full Stack Developer with a knack for building innovative digital solutions. With a deep understanding of both front-end and back-end development, I bring a holistic approach to my work, aiming to create seamless user experiences that captivate and engage.
- 
- <br/>
- <br/>
- Beyond the lines of code, I consider myself a problem solver, always seeking out new challenges that push me to think outside the box. I believe in the power of technology to transform businesses and positively impact people's lives, and I'm driven by the opportunity to be a part of that transformation. Outside of coding, you'll often find me exploring the great outdoors, capturing moments through my camera lens, or sketching artworks. These passions keep me inspired and provide a fresh perspective that I bring back to my work, infusing it with creativity and innovation.
+       I&apos;m Nikita, a passionate AI Engineer and Data Analyst specializing in healthcare technology solutions. With expertise in both machine learning and full-stack development, I create innovative applications that bridge the gap between complex data insights and user-friendly interfaces, particularly in healthcare domains where technology can significantly improve patient outcomes.
+
+<br/>
+<br/>
+My experience spans building interactive healthcare dashboards, implementing secure ETL pipelines, developing NLP applications for clinical data, and creating HIPAA-compliant systems. I thrive on solving complex problems that require both technical precision and creative thinking, whether it&apos;s optimizing database performance for faster API responses or developing intuitive visualizations that help medical professionals make data-driven decisions.
+
+<br/>
+<br/>
+Beyond coding, I&apos;m driven by the opportunity to use technology for meaningful impact in healthcare. When I&apos;m not developing applications or analyzing data, you&apos;ll find me exploring the latest AI research, contributing to open-source projects, or capturing the world through photography – experiences that continuously inspire fresh perspectives in my technical work.
     </motion.p>
 
     <div className='mt-20 flex flex-wrap gap-10'>
@@ -58,4 +63,5 @@ const About = () => {
   )
 }
 
-export default SectionWrapper(About, "about")
+const AboutSection = SectionWrapper(About, "about");
+export default AboutSection;

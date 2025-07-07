@@ -44,19 +44,19 @@ import {
   
   const services = [
     {
-      title: "Full Stack Developer",
+      title: "AI Engineer",
       icon: web,
     },
     {
-      title: "Data Science",
+      title: "Data Analyst",
       icon: mobile,
     },
     {
-      title: "Data Visualization",
+      title: "Healthcare Technology",
       icon: backend,
     },
     {
-      title: "Makerspace",
+      title: "Full Stack Developer",
       icon: creator,
     },
   ];
@@ -117,6 +117,21 @@ import {
   ];
   
   const experiences = [
+    {
+      title: "Research Data Analyst",
+      company_name: "University of Illinois Cancer Center",
+      icon: backend, // You can update this icon later
+      iconBg: "#383E56",
+      date: "2024 - Present",
+      points: [
+        "Built interactive healthcare dashboards with React and D3.js, reducing patient record retrieval time by 50%",
+        "Implemented secure ETL pipelines with Azure Data Factory integrating MS SQL and MongoDB data sources",
+        "Developed containerized NLP application with React frontend for extracting insights from clinical notes",
+        "Created role-based access control system with JWT authentication ensuring HIPAA-compliant data access",
+        "Led Python application development for Breast Cancer Screening team, saving 15+ hours weekly",
+        "Optimized backend performance by implementing efficient database queries and caching strategies, reducing API response times by 40%"
+      ],
+    },
     {
       title: "Full Stack Software Engineer Intern",
       company_name: "Slalom Build",

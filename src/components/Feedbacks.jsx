@@ -67,4 +67,5 @@ FeedbackCard.propTypes = {
           )
         }
         
-        export default  SectionWrapper(Feedbacks, "")
+const WrappedFeedbacks = SectionWrapper(Feedbacks, "");
+export default WrappedFeedbacks;

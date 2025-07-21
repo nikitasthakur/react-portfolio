@@ -148,4 +148,5 @@ const Contact = () => {
     )
   }
   
-  export default SectionWrapper(Contact, "contact")
+const WrappedContact = SectionWrapper(Contact, "contact");
+export default WrappedContact;

@@ -4,16 +4,18 @@ import {
     creator,
     web,
     javascript,
-    typescript,
-    html,
-    css,
+    pytorch,
+    tensorflow,
+    postgresql,
+    azure,
+    aws,
+    jupyter,
+    python,
     reactjs,
-    redux,
-    tailwind,
+    // redux,
     nodejs,
     mongodb,
     git,
-    figma,
     docker,
     threejs,
     accenture,
@@ -63,32 +65,36 @@ import {
   
   const technologies = [
     {
-      name: "HTML 5",
-      icon: html,
+      name: "Python",
+      icon: python,
     },
     {
-      name: "CSS 3",
-      icon: css,
+      name: "PyTorch",
+      icon: pytorch,
+    },
+    {
+      name: "TensorFlow",
+      icon: tensorflow,
+    },
+    {
+      name: "Jupyter",
+      icon: jupyter,
     },
     {
       name: "JavaScript",
       icon: javascript,
     },
     {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
       name: "React JS",
       icon: reactjs,
     },
+    // {
+    //   name: "Redux Toolkit",
+    //   icon: redux,
+    // },
     {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
+      name: "PostgreSQL",
+      icon: postgresql,
     },
     {
       name: "Node JS",
@@ -107,11 +113,15 @@ import {
       icon: git,
     },
     {
-      name: "figma",
-      icon: figma,
+      name: "Azure",
+      icon: azure,
+    },
+        {
+      name: "AWS",
+      icon: aws,
     },
     {
-      name: "docker",
+      name: "Docker",
       icon: docker,
     },
   ];
@@ -120,7 +130,7 @@ import {
     {
       title: "Research Data Analyst",
       company_name: "University of Illinois Cancer Center",
-      icon: backend, // You can update this icon later
+      icon: uic, // You can update this icon later
       iconBg: "#383E56",
       date: "2024 - Present",
       points: [

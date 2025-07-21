@@ -8,6 +8,9 @@ import WebGLErrorBoundary from "../WebGLErrorBoundary";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+  
+  console.log('Computer model loaded:', computer);
+  console.log('isMobile:', isMobile);
 
   return (
     <mesh>
@@ -60,17 +63,6 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <WebGLErrorBoundary fallback={
-      <div className="flex items-center justify-center h-full w-full bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-lg">
-        <div className="text-center p-8">
-          <div className="text-6xl mb-4">💻</div>
-          <h3 className="text-white text-xl mb-2">Welcome to My Portfolio</h3>
-          <p className="text-gray-400 text-sm">
-            3D graphics are not available, but you can still explore my work
-          </p>
-        </div>
-      </div>
-    }>
       <Canvas
         frameloop='demand'
         shadows
@@ -78,11 +70,35 @@ const ComputersCanvas = () => {
         camera={{ position: [20, 3, 5], fov: 25 }}
         gl={{ 
           preserveDrawingBuffer: true,
-          powerPreference: "high-performance"
+          powerPreference: "high-performance",
+          antialias: true,
+          alpha: true,
+          failIfMajorPerformanceCaveat: false
         }}
         onCreated={({ gl }) => {
           try {
             gl.setSize(window.innerWidth, window.innerHeight, false);
+            
+            // Add context loss recovery
+            const canvas = gl.domElement;
+            const handleContextLoss = (event) => {
+              console.log('WebGL context lost, preventing default');
+              event.preventDefault();
+            };
+            
+            const handleContextRestore = (event) => {
+              console.log('WebGL context restored');
+              // Force re-render
+              window.location.reload();
+            };
+            
+            canvas.addEventListener('webglcontextlost', handleContextLoss);
+            canvas.addEventListener('webglcontextrestored', handleContextRestore);
+            
+            return () => {
+              canvas.removeEventListener('webglcontextlost', handleContextLoss);
+              canvas.removeEventListener('webglcontextrestored', handleContextRestore);
+            };
           } catch (error) {
             console.warn('Canvas setup warning:', error);
           }
@@ -99,7 +115,6 @@ const ComputersCanvas = () => {
 
         <Preload all />
       </Canvas>
-    </WebGLErrorBoundary>
   );
 };
 

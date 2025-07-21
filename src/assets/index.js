@@ -7,6 +7,13 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import python from "./tech/python.svg";
+import pytorch from "./tech/pytorch.png"
+import tensorflow from "./tech/tensorflow.png";
+import postgresql from "./tech/postgresql.png";
+import azure from "./tech/azure.svg";
+import jupyter from "./tech/jupyter.svg";
+import aws from "./tech/aws.svg";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -40,6 +47,13 @@ export {
   github,
   menu,
   close,
+  pytorch,
+  tensorflow,
+  postgresql,
+  azure,
+  aws,
+  jupyter,
+  python, // Exporting Python icon
   css,
   docker,
   figma,

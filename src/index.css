@@ -219,7 +219,7 @@
 
 .social-menu ul li{
   list-style: none;
-  margin: 0 15px;
+  margin: 0 6px;
 }
 
 .social-menu ul li .fab{
@@ -229,7 +229,7 @@
   color: #000;
 }
 
-.social-menu ul li .fab:hover{
+.social-menu ul li svg:hover{
   color: #fff;
 }
 
@@ -259,28 +259,30 @@
 
 .social-menu ul li{
   list-style: none;
-  margin: 0 15px;
+  margin: 0 6px;
 }
 
-.social-menu ul li .fab{
-  font-size: 30px;
-  line-height: 60px;
+.social-menu ul li svg{
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
   transition: .3s;
   color: #fff;
 }
 
-.social-menu ul li .fab:hover{
+.social-menu ul li svg:hover{
   color: #fff;
 }
 
 .social-menu ul li a{
   position: relative;
-  display: block;
-  width: 60px;
-  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color:#050816;
-  text-align: center;
   transition: .6s;
   box-shadow: 0 5px 4px rgba(0,0,0,.5);
 }

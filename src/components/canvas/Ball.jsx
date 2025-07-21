@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei';
 import PropTypes from 'prop-types';
@@ -9,12 +9,14 @@ import WebGLErrorBoundary from '../WebGLErrorBoundary';
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
   
+  // Cleanup handled by react-three-fiber
+  
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]}/>
       <mesh castShadow receiveShadow scale={2.75}>
-        <icosahedronBufferGeometry args={[1,1]}/>
+        <icosahedronGeometry args={[1,1]}/>
         <meshStandardMaterial 
         color='#fff8eb'
         polygonOffset
@@ -49,7 +51,9 @@ Ball.propTypes = {
         frameloop='demand'
         dpr={[1, 2]}
         gl={{ 
-          preserveDrawingBuffer: true
+          preserveDrawingBuffer: true,
+          powerPreference: "high-performance",
+          antialias: true
         }}
         >
         <Suspense fallback={<CanvasLoader />}>

@@ -1,12 +1,14 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 import WebGLErrorBoundary from '../WebGLErrorBoundary';
 
 const Earth = () => {
-
   const earth = useGLTF('./planet/scene.gltf')
+  
+  // Cleanup handled by react-three-fiber
+  
   return (
     <primitive
     object = {earth.scene}
@@ -30,8 +32,10 @@ const EarthCanvas =() => {
       <Canvas
       shadows
       frameloop='demand'
-      gl ={{
-        preserveDrawingBuffer: true
+      gl={{
+        preserveDrawingBuffer: true,
+        powerPreference: "high-performance",
+        antialias: true
       }}
       camera={{
         fov: 45,

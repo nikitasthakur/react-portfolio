@@ -1,8 +1,10 @@
-import React, { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import PropTypes from "prop-types";
 
 import CanvasLoader from "../Loader";
+import WebGLErrorBoundary from "../WebGLErrorBoundary";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
@@ -27,6 +29,10 @@ const Computers = ({ isMobile }) => {
       />
     </mesh>
   );
+};
+
+Computers.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
 };
 
 const ComputersCanvas = () => {
@@ -54,24 +60,46 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <Canvas
-      frameloop='demand'
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
+    <WebGLErrorBoundary fallback={
+      <div className="flex items-center justify-center h-full w-full bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-lg">
+        <div className="text-center p-8">
+          <div className="text-6xl mb-4">💻</div>
+          <h3 className="text-white text-xl mb-2">Welcome to My Portfolio</h3>
+          <p className="text-gray-400 text-sm">
+            3D graphics are not available, but you can still explore my work
+          </p>
+        </div>
+      </div>
+    }>
+      <Canvas
+        frameloop='demand'
+        shadows
+        dpr={[1, 2]}
+        camera={{ position: [20, 3, 5], fov: 25 }}
+        gl={{ 
+          preserveDrawingBuffer: true,
+          powerPreference: "high-performance"
+        }}
+        onCreated={({ gl }) => {
+          try {
+            gl.setSize(window.innerWidth, window.innerHeight, false);
+          } catch (error) {
+            console.warn('Canvas setup warning:', error);
+          }
+        }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+          <Computers isMobile={isMobile} />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
+        <Preload all />
+      </Canvas>
+    </WebGLErrorBoundary>
   );
 };
 

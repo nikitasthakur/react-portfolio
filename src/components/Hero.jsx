@@ -14,6 +14,7 @@ const Hero = () => {
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
+        
 
         <div className='flex flex-col w-full max-w-2xl lg:max-w-4xl pointer-events-auto'>
           {/* Main intro section */}

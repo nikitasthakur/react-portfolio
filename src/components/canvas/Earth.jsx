@@ -1,7 +1,8 @@
-import { Suspense } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { OrbitControls, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
+import WebGLErrorBoundary from '../WebGLErrorBoundary';
 
 const Earth = () => {
 
@@ -18,29 +19,38 @@ const Earth = () => {
 
 const EarthCanvas =() => {
   return(
-    <Canvas
-    shadows
-    frameloop='demand'
-    gl ={{
-      preserveDrawingBuffer: true
-    }}
-    camera={{
-      fov: 45,
-      near: 0.1,
-      far: 200,
-      position: [-4, 3, 6]
-    }}
-    >
-    <Suspense fallback={<CanvasLoader/>}>
-      <OrbitControls
-      autoRotate
-      enableZoom={false}
-      maxPolarAngle={Math.PI / 2}
-      minPolarAngle={Math.PI / 2}
-      />
-      <Earth />
-    </Suspense>
-    </Canvas>
+    <WebGLErrorBoundary fallback={
+      <div className="flex items-center justify-center h-full w-full">
+        <div className="text-center">
+          <div className="text-4xl mb-2">🌍</div>
+          <p className="text-gray-400 text-sm">Earth model unavailable</p>
+        </div>
+      </div>
+    }>
+      <Canvas
+      shadows
+      frameloop='demand'
+      gl ={{
+        preserveDrawingBuffer: true
+      }}
+      camera={{
+        fov: 45,
+        near: 0.1,
+        far: 200,
+        position: [-4, 3, 6]
+      }}
+      >
+      <Suspense fallback={<CanvasLoader/>}>
+        <OrbitControls
+        autoRotate
+        enableZoom={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+        />
+        <Earth />
+      </Suspense>
+      </Canvas>
+    </WebGLErrorBoundary>
   )
 }
 

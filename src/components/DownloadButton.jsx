@@ -1,4 +1,3 @@
-import React from 'react';
 import { saveAs } from 'file-saver';
 import resumeFile from '../assets/resume/Nikita_Thakur_resume.pdf'; // Adjust the file path if necessary
 

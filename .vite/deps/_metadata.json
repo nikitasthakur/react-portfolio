@@ -1,0 +1,119 @@
+{
+  "hash": "b4f2ee0a",
+  "browserHash": "c569dca4",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "14e9f55d",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "41b3e705",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "869052a3",
+      "needsInterop": false
+    },
+    "prop-types": {
+      "src": "../../node_modules/prop-types/index.js",
+      "file": "prop-types.js",
+      "fileHash": "5ba8dab5",
+      "needsInterop": true
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "eafe3c55",
+      "needsInterop": false
+    },
+    "react-vertical-timeline-component": {
+      "src": "../../node_modules/react-vertical-timeline-component/dist-es6/index.js",
+      "file": "react-vertical-timeline-component.js",
+      "fileHash": "21bec457",
+      "needsInterop": true
+    },
+    "react-icons/bs": {
+      "src": "../../node_modules/react-icons/bs/index.esm.js",
+      "file": "react-icons_bs.js",
+      "fileHash": "ab42bfdb",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.esm.js",
+      "file": "react-icons_fa.js",
+      "fileHash": "d3dcd05a",
+      "needsInterop": false
+    },
+    "react-icons/ai": {
+      "src": "../../node_modules/react-icons/ai/index.esm.js",
+      "file": "react-icons_ai.js",
+      "fileHash": "d0aed689",
+      "needsInterop": false
+    },
+    "react-parallax-tilt": {
+      "src": "../../node_modules/react-parallax-tilt/dist/index.esm.js",
+      "file": "react-parallax-tilt.js",
+      "fileHash": "3522fce9",
+      "needsInterop": false
+    },
+    "file-saver": {
+      "src": "../../node_modules/file-saver/dist/FileSaver.min.js",
+      "file": "file-saver.js",
+      "fileHash": "dd00868f",
+      "needsInterop": true
+    },
+    "@react-three/fiber": {
+      "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "file": "@react-three_fiber.js",
+      "fileHash": "1304d03b",
+      "needsInterop": false
+    },
+    "@react-three/drei": {
+      "src": "../../node_modules/@react-three/drei/index.js",
+      "file": "@react-three_drei.js",
+      "fileHash": "43709770",
+      "needsInterop": false
+    },
+    "@emailjs/browser": {
+      "src": "../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "99cc7ced",
+      "needsInterop": false
+    },
+    "maath/random/dist/maath-random.esm": {
+      "src": "../../node_modules/maath/random/dist/maath-random.esm.js",
+      "file": "maath_random_dist_maath-random__esm.js",
+      "fileHash": "20c0127e",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-EMJDDDZZ": {
+      "file": "chunk-EMJDDDZZ.js"
+    },
+    "chunk-UNVIYBYJ": {
+      "file": "chunk-UNVIYBYJ.js"
+    },
+    "chunk-6SRDACTQ": {
+      "file": "chunk-6SRDACTQ.js"
+    },
+    "chunk-2RMY6PF2": {
+      "file": "chunk-2RMY6PF2.js"
+    },
+    "chunk-VJO7ZY2D": {
+      "file": "chunk-VJO7ZY2D.js"
+    },
+    "chunk-FLAVOKRJ": {
+      "file": "chunk-FLAVOKRJ.js"
+    },
+    "chunk-AC2VUBZ6": {
+      "file": "chunk-AC2VUBZ6.js"
+    }
+  }
+}

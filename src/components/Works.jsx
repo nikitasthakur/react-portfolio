@@ -18,7 +18,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
         scale: 1,
         speed: 450
       }}
-      className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+      className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full max-w-[360px]'
       >
 
         <div className='relative w-full h-[230px]'>
@@ -72,7 +72,7 @@ ProjectCard.propTypes = {
 
 const Works = () => {
   return (
-    <>
+    <div className="w-full">
     <motion.div variants={textVariant()}>
     <p className={styles.sectionSubText}>My Work</p>
     <h2 className={styles.sectionHeadText}>Projects.</h2>
@@ -89,7 +89,7 @@ const Works = () => {
           and manage projects effectively.
       </motion.p>
     </div>
-    <div className='mt-20 flex flex-wrap gap-7'>
+    <div className='mt-20 flex flex-wrap gap-4 sm:gap-7 justify-center px-4 sm:px-0'>
       {projects.map((project, index) => (
         <ProjectCard 
         key={`project-${index}`}
@@ -99,7 +99,7 @@ const Works = () => {
       ))}
 
     </div>
-    </>
+    </div>
   )
 }
 

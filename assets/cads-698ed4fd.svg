@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-label="Cancer Data Shelter platform diagram">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1026"/>
+      <stop offset="100%" stop-color="#101936"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c6cf0"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="460" fill="url(#bg)"/>
+  <g stroke="#1e2a4d" stroke-width="1">
+    <path d="M0 115 H720 M0 230 H720 M0 345 H720"/>
+    <path d="M180 0 V460 M360 0 V460 M540 0 V460"/>
+  </g>
+  <!-- source nodes -->
+  <g font-family="monospace" font-size="16" text-anchor="middle">
+    <g>
+      <rect x="40" y="48" width="150" height="44" rx="10" fill="#16203f" stroke="#2dd4bf55"/>
+      <text x="115" y="76" fill="#9fb3d8">Epic Clarity</text>
+    </g>
+    <g>
+      <rect x="40" y="124" width="150" height="44" rx="10" fill="#16203f" stroke="#2dd4bf55"/>
+      <text x="115" y="152" fill="#9fb3d8">Tumor Registry</text>
+    </g>
+    <g>
+      <rect x="40" y="200" width="150" height="44" rx="10" fill="#16203f" stroke="#2dd4bf55"/>
+      <text x="115" y="228" fill="#9fb3d8">i2b2</text>
+    </g>
+    <g>
+      <rect x="40" y="276" width="150" height="44" rx="10" fill="#16203f" stroke="#2dd4bf55"/>
+      <text x="115" y="304" fill="#9fb3d8">Tempus</text>
+    </g>
+    <g>
+      <rect x="40" y="352" width="150" height="44" rx="10" fill="#16203f" stroke="#2dd4bf55"/>
+      <text x="115" y="380" fill="#9fb3d8">OnCore</text>
+    </g>
+  </g>
+  <!-- flow lines -->
+  <g stroke="url(#teal)" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M190 70 C 280 70, 280 215, 360 218"/>
+    <path d="M190 146 C 270 146, 280 220, 360 224"/>
+    <path d="M190 222 H 360"/>
+    <path d="M190 298 C 270 298, 280 240, 360 236"/>
+    <path d="M190 374 C 280 374, 280 245, 360 242"/>
+  </g>
+  <!-- database shelter -->
+  <g>
+    <ellipse cx="455" cy="150" rx="85" ry="26" fill="#1b2a52" stroke="url(#teal)" stroke-width="2.5"/>
+    <path d="M370 150 V 310 A 85 26 0 0 0 540 310 V 150" fill="#16224a" stroke="url(#teal)" stroke-width="2.5"/>
+    <ellipse cx="455" cy="230" rx="85" ry="26" fill="none" stroke="#2dd4bf66" stroke-width="2"/>
+    <text x="455" y="385" fill="#e2e8f0" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">CADS</text>
+  </g>
+  <!-- governance shield -->
+  <g transform="translate(590,180)">
+    <path d="M40 0 L80 16 V52 C80 86 60 104 40 112 C20 104 0 86 0 52 V16 Z" fill="#1b2a52" stroke="url(#violet)" stroke-width="2.5"/>
+    <path d="M22 54 L36 68 L60 38" fill="none" stroke="url(#teal)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="140" fill="#9fb3d8" font-family="monospace" font-size="14" text-anchor="middle">governed</text>
+  </g>
+</svg>

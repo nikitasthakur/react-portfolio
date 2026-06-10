@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-label="SDOH NLP extraction from clinical notes">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1026"/>
+      <stop offset="100%" stop-color="#13102e"/>
+    </linearGradient>
+    <linearGradient id="teal2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="460" fill="url(#bg2)"/>
+  <!-- clinical note -->
+  <g transform="translate(48,70)">
+    <rect width="220" height="300" rx="12" fill="#16203f" stroke="#2dd4bf44"/>
+    <g stroke="#3b4a76" stroke-width="8" stroke-linecap="round">
+      <path d="M24 44 H196"/>
+      <path d="M24 76 H160"/>
+      <path d="M24 140 H196"/>
+      <path d="M24 204 H150"/>
+      <path d="M24 268 H180"/>
+    </g>
+    <g stroke-width="8" stroke-linecap="round">
+      <path d="M24 108 H120" stroke="#2dd4bf"/>
+      <path d="M24 172 H170" stroke="#a78bfa"/>
+      <path d="M24 236 H100" stroke="#f0abfc"/>
+    </g>
+    <text x="110" y="-16" fill="#9fb3d8" font-family="monospace" font-size="15" text-anchor="middle">757,000+ notes</text>
+  </g>
+  <!-- arrow / pipeline -->
+  <g stroke="url(#teal2)" stroke-width="3" fill="none">
+    <path d="M290 220 H 380" stroke-dasharray="6 8"/>
+    <path d="M372 208 L392 220 L372 232" fill="none"/>
+  </g>
+  <text x="335" y="200" fill="#9fb3d8" font-family="monospace" font-size="14" text-anchor="middle">NLP / AI</text>
+  <!-- phenotype clusters -->
+  <g>
+    <g fill="#2dd4bf">
+      <circle cx="480" cy="120" r="9"/><circle cx="516" cy="98" r="7"/><circle cx="540" cy="132" r="11"/><circle cx="502" cy="150" r="6"/><circle cx="556" cy="100" r="6"/>
+    </g>
+    <g fill="#a78bfa">
+      <circle cx="600" cy="220" r="10"/><circle cx="640" cy="200" r="7"/><circle cx="652" cy="244" r="8"/><circle cx="612" cy="258" r="6"/><circle cx="668" cy="214" r="5"/>
+    </g>
+    <g fill="#f0abfc">
+      <circle cx="488" cy="320" r="8"/><circle cx="524" cy="300" r="6"/><circle cx="544" cy="338" r="10"/><circle cx="500" cy="352" r="6"/>
+    </g>
+    <g stroke="#2dd4bf44" stroke-width="1.5">
+      <path d="M480 120 L516 98 M516 98 L540 132 M540 132 L502 150 M540 132 L556 100"/>
+    </g>
+    <g stroke="#a78bfa44" stroke-width="1.5">
+      <path d="M600 220 L640 200 M640 200 L652 244 M652 244 L612 258 M640 200 L668 214"/>
+    </g>
+    <g stroke="#f0abfc44" stroke-width="1.5">
+      <path d="M488 320 L524 300 M524 300 L544 338 M544 338 L500 352"/>
+    </g>
+  </g>
+  <text x="570" y="410" fill="#9fb3d8" font-family="monospace" font-size="15" text-anchor="middle">SDOH phenotypes · 5,585+ patients</text>
+  <!-- AACR badge -->
+  <g transform="translate(470,40)">
+    <rect width="206" height="34" rx="17" fill="#1b2a52" stroke="url(#teal2)" stroke-width="1.5"/>
+    <text x="103" y="23" fill="#e2e8f0" font-family="monospace" font-size="15" text-anchor="middle">AACR 2026 poster</text>
+  </g>
+</svg>

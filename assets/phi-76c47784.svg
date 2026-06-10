@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-label="PHI de-identification engine">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1026"/>
+      <stop offset="100%" stop-color="#0e1c33"/>
+    </linearGradient>
+    <linearGradient id="teal3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="460" fill="url(#bg3)"/>
+  <!-- document with PHI -->
+  <g transform="translate(60,80)">
+    <rect width="200" height="280" rx="12" fill="#16203f" stroke="#3b4a76"/>
+    <g stroke-width="8" stroke-linecap="round">
+      <path d="M24 40 H120" stroke="#f87171"/>
+      <path d="M24 72 H176" stroke="#3b4a76"/>
+      <path d="M24 104 H90" stroke="#f87171"/>
+      <path d="M24 136 H170" stroke="#3b4a76"/>
+      <path d="M24 168 H140" stroke="#f87171"/>
+      <path d="M24 200 H176" stroke="#3b4a76"/>
+      <path d="M24 232 H110" stroke="#3b4a76"/>
+    </g>
+    <text x="100" y="-18" fill="#fca5a5" font-family="monospace" font-size="15" text-anchor="middle">raw PHI</text>
+  </g>
+  <!-- shield filter -->
+  <g transform="translate(310,160)">
+    <path d="M50 0 L100 20 V66 C100 110 75 132 50 142 C25 132 0 110 0 66 V20 Z" fill="#1b2a52" stroke="url(#teal3)" stroke-width="3"/>
+    <text x="50" y="62" fill="#e2e8f0" font-family="monospace" font-size="13" text-anchor="middle">HIPAA</text>
+    <text x="50" y="84" fill="#e2e8f0" font-family="monospace" font-size="12" text-anchor="middle">Safe Harbor</text>
+    <text x="50" y="172" fill="#9fb3d8" font-family="monospace" font-size="14" text-anchor="middle">rule-based</text>
+  </g>
+  <g stroke="url(#teal3)" stroke-width="3" fill="none">
+    <path d="M272 220 H 300" stroke-dasharray="5 7"/>
+    <path d="M420 220 H 448" stroke-dasharray="5 7"/>
+    <path d="M442 208 L460 220 L442 232"/>
+  </g>
+  <!-- de-identified document -->
+  <g transform="translate(470,80)">
+    <rect width="200" height="280" rx="12" fill="#16203f" stroke="#2dd4bf66"/>
+    <g stroke-width="8" stroke-linecap="round">
+      <path d="M24 40 H120" stroke="#2dd4bf"/>
+      <path d="M24 72 H176" stroke="#3b4a76"/>
+      <path d="M24 104 H90" stroke="#2dd4bf"/>
+      <path d="M24 136 H170" stroke="#3b4a76"/>
+      <path d="M24 168 H140" stroke="#2dd4bf"/>
+      <path d="M24 200 H176" stroke="#3b4a76"/>
+      <path d="M24 232 H110" stroke="#3b4a76"/>
+    </g>
+    <text x="100" y="-18" fill="#5eead4" font-family="monospace" font-size="15" text-anchor="middle">de-identified</text>
+  </g>
+  <text x="360" y="425" fill="#9fb3d8" font-family="monospace" font-size="15" text-anchor="middle">Python · pyodbc · SQL Server</text>
+</svg>

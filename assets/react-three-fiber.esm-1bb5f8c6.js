@@ -1,4 +1,4 @@
-import{r as Ne,g as Zg}from"./index-2f3c6cac.js";/**
+import{r as Ne,g as Zg}from"./index-813cd180.js";/**
  * @license
  * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT
